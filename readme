@@ -1,0 +1,5 @@
+G723 audio codec for ARM Coterx-A8 running on android platform
+==============================================================================
+
+This a audio codec for g722 source file, you change the makefile , so that you
+can running it on any platforms. 
