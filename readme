@@ -1,4 +1,4 @@
-G722 audio codec for ARM Coterx-A8 running on android platform
+G722 audio codec for ARM Coterx-A8 nning on android platform
 ==============================================================================
 
 Thi iss a audio codec for g722 source file, you change the makefile , so that you
