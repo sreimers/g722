@@ -48,8 +48,9 @@ int main(int argc, char* argv[])
     char inname[60], outbit[40], outname[40];
     FILE *inp, *outbitp, *outp;
 
+	/* ITU-T algorithm input 20ms data */
+    WebRtc_Word16 framelength = 320;
     int framecnt, endfile;
-    WebRtc_Word16 framelength = 160;
     G722EncInst *G722enc_inst;
     G722DecInst *G722dec_inst;
     int err;
@@ -66,7 +67,7 @@ int main(int argc, char* argv[])
     WebRtc_Word16 speechType[1];
 
     /* handling wrong input arguments in the command line */
-    if (argc!=5)  {
+    if (argc != 5) {
         printf("\n\nWrong number of arguments or flag values.\n\n");
 
         printf("\n");
@@ -141,7 +142,7 @@ int main(int argc, char* argv[])
     WebRtcG722_FreeEncoder((G722EncInst *)G722enc_inst);
     WebRtcG722_FreeDecoder((G722DecInst *)G722dec_inst);
 
-    length_file = ((double)framecnt*(double)framelength/16000);
+    length_file = ((double)framecnt * (double)framelength / 16000);
     printf("\n\nLength of speech file: %.1f s\n", length_file);
     printf("Time to run G.722:      %.2f s (%.2f %% of realtime)\n\n", runtime, (100*runtime/length_file));
     printf("---------------------END----------------------\n");
