@@ -15,7 +15,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-//#include "typedefs.h"
 
 /* include API */
 #include "g722_interface.h"
@@ -23,10 +22,6 @@
 /* Runtime statistics */
 #include <time.h>
 #define CLOCKS_PER_SEC_G722  100000
-
-// Forward declaration
-typedef struct WebRtcG722EncInst    G722EncInst;
-typedef struct WebRtcG722DecInst    G722DecInst;
 
 /* function for reading audio data from PCM file */
 int readframe(WebRtc_Word16 *data, FILE *inp, int length)
