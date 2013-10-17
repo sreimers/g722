@@ -1,5 +1,4 @@
 #
-#  Copyright (c) 2012, Texas Instruments Incorporated
 #  All rights reserved.
 #
 #  Redistribution and use in source and binary forms, with or without
@@ -34,15 +33,12 @@
 #  ======== Makefile ========
 #
 
-#srcs = main_host.c App.c
-
 srcs = g722_encode.c g722_decode.c g722_interface.c test_main.c
 CGT_ARM_PREFIX = /opt/CodeSourcery/bin/arm-none-linux-gnueabi-
 
 -include $(addprefix bin/$(PROFILE)/obj/,$(patsubst %.c,%.ov5T.dep,$(srcs)))
 
 objs = $(addprefix bin/$(PROFILE)/obj/,$(patsubst %.c,%.ov5T,$(srcs)))
-#libs = $(SYSLINK_INSTALL_DIR)/packages/ti/syslink/lib/syslink.a_$(PROFILE)
 
 PKGPATH := include
 
