@@ -1,5 +1,5 @@
 /*
- *  Copyright (c) 2012 The WebRTC project authors. All Rights Reserved.
+ *  Copyright (c) 2012 The project authors. All Rights Reserved.
  *
  *  Use of this source code is governed by a BSD-style license
  *  that can be found in the LICENSE file in the root of the source
@@ -9,7 +9,7 @@
  */
 
 /*
- * testG722.cpp : Defines the entry point for the console application.
+ * test_main.c : Defines the entry point for the console application.
  */
 
 #include <stdio.h>
@@ -63,9 +63,8 @@ int main(int argc, char* argv[])
 
     /* handling wrong input arguments in the command line */
     if (argc != 5) {
-        printf("\n\nWrong number of arguments or flag values.\n\n");
+        printf("Wrong number of arguments or flag values.\n");
 
-        printf("\n");
         printf("Usage:\n");
         printf("./test_main framelength infile outbitfile outspeechfile\n");
         printf("with:\n");
@@ -138,8 +137,8 @@ int main(int argc, char* argv[])
     WebRtcG722_FreeDecoder((G722DecInst *)G722dec_inst);
 
     length_file = ((double)framecnt * (double)framelength / 16000);
-    printf("\n\nLength of speech file: %.1f s\n", length_file);
-    printf("Time to run G.722:      %.2f s (%.2f %% of realtime)\n\n", runtime, (100*runtime/length_file));
+    printf("Length of speech file:  %.1f s\n", length_file);
+    printf("Time to run G.722:      %.2f s (%.2f %% of realtime)\n", runtime, (100*runtime/length_file));
     printf("---------------------END----------------------\n");
 
     fclose(inp);
