@@ -34,7 +34,7 @@
 #
 
 srcs = g722_encode.c g722_decode.c g722_interface.c test_main.c
-CGT_ARM_PREFIX = /opt/CodeSourcery/bin/arm-none-linux-gnueabi-
+CGT_ARM_PREFIX = /opt/codesourcery/bin/arm-none-linux-gnueabi-
 
 -include $(addprefix bin/$(PROFILE)/obj/,$(patsubst %.c,%.ov5T.dep,$(srcs)))
 
