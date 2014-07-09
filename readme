@@ -1,5 +1,4 @@
-G722 audio algorithm for ARM Coterx-A8 running on android platforms
+G722 audio algorithm for ARM Coterx-A8 running on android or Linux
 ==============================================================================
 
-This a audio algorithm for g722 source files adapter to ITU-T, you can modify
-the makefile to run it on any platforms. 
+This a audio algorithm for g722 source files adapter to ITU-T
